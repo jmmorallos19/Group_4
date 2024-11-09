@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Group 4</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: #bca793;">
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark position-sticky top-0">
+        <div class="container">
+
+            <a class="navbar-brand fs-2 fw-bold" href="#"><span class="text-danger">Group</span>4</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDark"
+                aria-controls="navbarDark" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse show" id="navbarDark">
+                <ul class="navbar-nav ms-auto mb-2 mb-xl-0 fs-5 ms-auto p-2 text-center">
+                    <li class="nav-item me-3">
+                        <a class="nav-link active " href="#Home">Home</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#topic1">Topic 1</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#topic2">Topic 2</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#topic3">Topic 3</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link" href="#reporter">Reporter</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <script>
+        // Select all nav links
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+        // Add click event listener to each link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Remove 'active' class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+                // Add 'active' class to the clicked link
+                this.classList.add('active');
+            });
+        });
+
+        document.querySelectorAll('.navbar-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();  // Prevent default anchor click behavior
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const yOffset = -150; // Offset for fixed navbar
+                    const yPosition = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+                    window.scrollTo({
+                        top: yPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+    <main>
+        <section class="d-flex justify-content-center align-items-center" id="Home"
+            style="height: max-content; padding-top:8rem; padding-bottom: 8rem;  padding-inline: 20%;">
+            <h1 class="text-uppercase m-0 text-center"
+                style="font-size: clamp(1.5rem, 4vw, 5rem); font-weight: 900; color: #fff; text-shadow: -1px -1px 10px rgba(0, 0, 0, 1); letter-spacing: .2rem;">
+                E-portfolio Journal
+                on Spanish Period
+                By group 4</h1>
+        </section>
+
+        <section id="topic1" class="d-flex flex-wrap col-12 mt-2">
+            <div class="col col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <img src="images/image2.png" alt="images" width="600px">
+            </div>
+            <div class="col col-12 col-md-6 p-5 d-flex justify-content-center align-items-center">
+                <p style="font-size: clamp(1rem, 1.1vw, 1.3rem);">
+                    Florante at Laura (1838)
+
+                    Written by Francisco Balagtas in 1838, Florante at Laura was heavily influenced by the social and
+                    political climate of the Philippines during Spanish colonization. Though the poem is set in a
+                    fictionalized version of Albania, it serves as an allegory for the injustices and oppression
+                    experienced by Filipinos under Spanish rule.
+
+                    During this period, the Spanish colonial government exerted strict control over the Philippines, and
+                    Filipino natives, particularly the lower class or Indios, suffered from discrimination, social
+                    inequality, and the abuses of the colonial authorities and friars. Balagtas subtly criticized these
+                    injustices through the characters in Florante at Laura—Florante represents the oppressed, while the
+                    antagonists (such as Adolfo) symbolize the corrupt ruling powers.
+
+                    The poem’s use of Tagalog was a significant act of resistance. At a time when Spanish was the
+                    language of power, writing in Tagalog allowed Balagtas to reach a wider Filipino audience, promoting
+                    national identity and pride. The themes of tyranny, love for country, and moral integrity in
+                    Florante at Laura reflected the growing Filipino consciousness of the need for social justice and
+                    political reform, which eventually contributed to the nationalist movements that followed.</p>
+            </div>
+
+        </section>
+
+        <section id="topic2" class="d-flex flex-wrap col-12 mt-2">
+
+
+            <div class="col col-12 col-md-6 p-5 d-flex justify-content-center align-items-center">
+                <p style="font-size: clamp(1rem, 1.1vw, 1.3rem);">
+                    The Pasyon, first popularized in 1704 by Gaspar Aquino de Belen, is a narrative of the passion,
+                    death, and resurrection of Jesus Christ. Written in poetic form, it became central to Filipino
+                    religious life, particularly during Holy Week, when communities gather to chant or sing the Pasyon.
+                    Spanish colonization profoundly influenced both its themes and language, as the Spanish missionaries
+                    sought to embed Christian doctrine into Filipino culture.
+
+                    The Pasyon was not only a religious text but also a tool for reinforcing colonial control. By
+                    spreading the story of Christ's suffering and sacrifice, the Spanish used the themes of redemption
+                    and salvation to instill Catholic values among Filipinos. The use of local languages made it more
+                    accessible, ensuring widespread adoption. Over time, the Pasyon became deeply ingrained in Filipino
+                    spirituality, symbolizing both the internalization of colonial religious teachings and the
+                    resilience of Filipino traditions, as it was often performed in communal settings that blended local
+                    and colonial practices.
+
+                    <br><br>
+                    SENAKULO
+
+                    Filipino living the event of the past , Senakulo performances involve actors playing the key figures
+                    of the Passion story, such as Jesus, Mary, the apostles, and the Roman soldiers. The play typically
+                    follows the scriptural accounts of the last days of Jesus' life, highlighting events like the Last
+                    Supper, the agony in the garden, the trial before Pontius Pilate, the crucifixion, and the
+                    resurrection.</p>
+            </div>
+            <div class="col col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
+                <img src="images/image1.png" alt="images" width="500px">
+                <img src="images/image4.png" alt="images" width="400px">
+            </div>
+        </section>
+
+
+
+        <section id="topic3" class="d-flex flex-wrap col-12 mt-2">
+            <div class="col col-12 col-md-6 d-flex justify-content-center align-items-center">
+                <img src="images/image3.png" alt="images" width="500px">
+            </div>
+
+            <div class="col col-12 col-md-6 p-5 d-flex justify-content-center align-items-center">
+                <p style="font-size: clamp(1rem, 1.1vw, 1.3rem);">
+                    Doctrina Christiana (1593) - Historical Background:
+
+                    Doctrina Christiana was the first book printed in the Philippines, produced using the woodblock
+                    printing method. It was a religious manual, written in Spanish and Tagalog (using the Baybayin
+                    script), meant to teach Catholic doctrine to early Filipino converts. Its creation was heavily
+                    influenced by the Spanish colonization, which aimed to spread Christianity throughout the islands as
+                    part of its imperial strategy.
+
+                    Spanish colonizers, particularly the friars, believed that converting Filipinos to Catholicism would
+                    solidify their control over the population. The use of both Spanish and native languages in Doctrina
+                    Christiana reflects the colonizers' goal of educating and indoctrinating Filipinos, while also
+                    accommodating their need to communicate effectively with the local people. This work highlights the
+                    integration of colonial religious teachings into the daily lives of Filipinos, symbolizing both
+                    cultural dominance and the beginning of a profound religious transformation that shaped Filipino
+                    identity under Spanish rule.</p>
+            </div>
+        </section>
+
+        <section id="reporter" class="d-flex flex-column flex-wrap col-12 p-5 mt-2">
+            <h2 class="text-uppercase text-center" style="font-size: clamp(1.3rem, 2vw, 2rem); font-weight: 700;">
+                Reporters</h2>
+            <div class="reporters p-5 col-12 d-flex flex-wrap">
+                <div class="col col-12 col-md-6 col-xl-3 d-flex align-items-center flex-column gap-2">
+                    <img src="images/developer.jpg" alt="reporter1" style="width: 260px;">
+                    <p class="text-center text-uppercase"
+                        style="font-size: clamp(1.3rem, 1.4rem, 1.7rem); font-weight: 600; letter-spacing: .1rem;">John
+                        Mark G. Morallos</p>
+                </div>
+
+                <div class="col col-12 col-md-6 col-xl-3 d-flex align-items-center flex-column gap-2">
+                    <img src="images/tl.jpg" alt="reporter1" style="width: 260px;">
+                    <p class="text-center text-uppercase"
+                        style="font-size: clamp(1.3rem, 1.4rem, 1.7rem); font-weight: 600; letter-spacing: .1rem;">
+                        Cristian C. Megio</p>
+                </div>
+
+                <div class="col col-12 col-md-6 col-xl-3 d-flex align-items-center flex-column gap-2">
+                    <img src="images/garlan.jpg" alt="reporter1" style="width: 260px;">
+                    <p class="text-center text-uppercase"
+                        style="font-size: clamp(1.3rem, 1.4rem, 1.7rem); font-weight: 600; letter-spacing: .1rem;">James
+                        Darwin P. Garlan</p>
+                </div>
+
+                <div class="col col-12 col-md-6 col-xl-3 d-flex align-items-center flex-column gap-2">
+                    <img src="images/researchhead.jpg" alt="reporter1" style="width: 260px;">
+                    <p class="text-center text-uppercase"
+                        style="font-size: clamp(1.3rem, 1.4rem, 1.7rem); font-weight: 600; letter-spacing: .1rem;">Shyla
+                        Nicole B. Munoz</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-dark text-center text-white py-3 mt-auto">
+            <div class="container">
+                <p class="mb-0">&copy; 2024 Group 4. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
